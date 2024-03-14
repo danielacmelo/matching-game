@@ -22,9 +22,15 @@
 
 /* Typography
 --------------------------------------------- */
-body {
+body { 
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: ;
+    background-color: ;
+      
+      }
 	
-}
 
 h1,
 h2,
@@ -95,7 +101,7 @@ a:active {
 	margin: 0 auto;
 }
 
-
+ 
 
 
 /*--------------------------------------------------------------
