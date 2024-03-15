@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 566.9 566.9" style="enable-background:new 0 0 566.9 566.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:none;stroke:#3E3D40;stroke-width:14;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="background">
+</g>
+<g id="sound_icons">
+	<g>
+		<g>
+			<g>
+				<g>
+					<path class="st0" d="M295.4,283.5c0,3.6-2.9,6.5-6.5,6.5c-3.6,0-6.5-2.9-6.5-6.5c0-3.6,2.9-6.5,6.5-6.5
+						C292.5,277,295.4,279.9,295.4,283.5z"/>
+				</g>
+			</g>
+			<path class="st1" d="M280.3,198.1l-59,51.7h-33.5c-5.9,0-10.7,4.8-10.7,10.7v46c0,5.9,4.8,10.7,10.7,10.7h33.5l59,51.7
+				c5,4.4,12.8,0.8,12.8-5.8V203.9C293,197.2,285.2,193.7,280.3,198.1z"/>
+		</g>
+		<g>
+			<line class="st1" x1="328" y1="314.4" x2="389.9" y2="252.5"/>
+		</g>
+		<g>
+			<line class="st1" x1="389.9" y1="314.4" x2="328" y2="252.5"/>
+		</g>
+	</g>
+</g>
+</svg>
