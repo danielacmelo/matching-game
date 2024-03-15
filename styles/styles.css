@@ -40,8 +40,9 @@ h6 {
 	
 }
 
-h2{
-	padding: 5.125rem 0 0 15.75rem; 
+h2	{
+	font-size: 2rem;
+	padding: 2rem 0  0; 
 }
 
 
@@ -114,7 +115,7 @@ a:active {
 --------------------------------------------------------------*/
 
 section {
-	margin: 5rem 0 auto;
+	margin: 1rem 10rem;
 }
 
 
@@ -132,6 +133,12 @@ section {
 }
 
 
+.center {
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+}
+
 .dog-start,
 .dog-win{
 	width: 416px;
@@ -139,6 +146,8 @@ section {
 	border-radius: 10px;
 	box-shadow: 4px 8px 4px;
 }
+
+
 
 .container {
 	display: flex;
@@ -155,19 +164,19 @@ section {
 	border: #707070 solid 1px;
 	border-radius: 10px;
 	padding: 3rem;
-
 }
 
 
-.cards-container img {
+.cards-container img,
+.back-cards {
 	display: block;
 	width: 180px;
 	height: 180px;
 	object-fit: cover;
 	border: #707070 solid 1px;
 	border-radius: 10px;
-
 }	
+
 
 
 
@@ -180,5 +189,6 @@ section {
 
 footer {
 	font-size: small;
-	margin: 2.5rem auto;
+	margin: 1.5rem auto;
+	text-align: center;
 }
