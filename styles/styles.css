@@ -132,6 +132,47 @@ section {
 }
 
 
+.dog-start,
+.dog-win{
+	width: 416px;
+	border: #707070 solid 1px;
+	border-radius: 10px;
+	box-shadow: 4px 8px 4px;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.cards-container {
+	display: grid;
+	grid-template-columns: repeat(6,180px);
+	grid-template-rows: repeat(2,180px);
+	gap: 2rem;
+	/* justify-content: center; */
+	/* align-items: self-start; */
+	border: #707070 solid 1px;
+	border-radius: 10px;
+	padding: 3rem;
+
+}
+
+
+.cards-container img {
+	display: block;
+	width: 180px;
+	height: 180px;
+	object-fit: cover;
+	border: #707070 solid 1px;
+	border-radius: 10px;
+
+}	
+
+
+
+
+
 
 
 /* Footer
