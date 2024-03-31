@@ -148,13 +148,12 @@ section {
 }
 
 
-
 .container {
 	display: flex;
 	justify-content: center;
 }
 
-.cards-container {
+#cards-container {
 	display: grid;
 	grid-template-columns: repeat(6,180px);
 	grid-template-rows: repeat(2,180px);
@@ -167,7 +166,7 @@ section {
 }
 
 
-.cards-container img,
+#cards-container img,
 .back-cards {
 	display: block;
 	width: 180px;
@@ -176,6 +175,10 @@ section {
 	border: #707070 solid 1px;
 	border-radius: 10px;
 }	
+
+#cards-container img {
+	cursor: pointer;
+}
 
 
 /* Footer
