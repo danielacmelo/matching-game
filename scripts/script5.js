@@ -73,6 +73,16 @@ function createImageElement(index) {
     return div;
 }
 
+
+// Get reference to the match count element
+const matchCountElement = document.getElementById('match-count');
+
+// Function to update and display the match count
+function updateMatchCount() {
+    matchCountElement.textContent = `Matches: ${matchedImages.length}`;
+}
+
+
 // Function to handle click event on image cards
 function handleClick(imageCard) {
     const index = imageCard.dataset.index;
@@ -89,6 +99,8 @@ function handleClick(imageCard) {
             firstImageIndex !== index &&
             !matchedImages.includes(imageName)) {
             matchedImages.push(imageName);
+            updateMatchCount(); // Update match count after each match
+            checkWinCondition(); // Check win condition after each match
         }
         firstImageName = ""; // Reset variables for the next pair
         firstImageIndex = "";
@@ -134,3 +146,21 @@ for (let i = 0; i < shuffleAllDogs.length; i++) {
 const imageCards = document.querySelectorAll('.image-card');
 
 
+// Event listener for the "Yes" button in the win-game section
+document.getElementById('btn-yes').addEventListener('click', () => {
+    // Reset the game (hide win-game section, reset matched images, shuffle cards)
+    toggleSectionDisplay(startGameSection);
+    matchedImages.length = 0; // Clear the matched images array
+    updateMatchCount(); // Update the match count display
+    shuffleAllDogs = shuffleArray(allDogs); // Reshuffle the cards
+    // Reset all card images to the paw image
+    imageCards.forEach(card => {
+        card.src = `images/${paw}`;
+    });
+});
+
+// Event listener for the "No" button in the win-game section
+document.getElementById('btn-no').addEventListener('click', () => {
+    // Hide the win-game section and stay on the same screen
+    toggleSectionDisplay(gameScreenSection);
+});

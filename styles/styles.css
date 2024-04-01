@@ -240,7 +240,10 @@ section p {
 }
 
 
-
+.game-screen-opacity {
+    opacity: 0.5; 
+    pointer-events: none; 
+}
 
 
 /* Footer
