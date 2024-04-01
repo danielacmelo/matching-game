@@ -1,3 +1,33 @@
+const startGameSection =  document.getElementById('start-game');
+const gameScreenSection =  document.getElementById('game-screen');
+const winGameSection =  document.getElementById('win-game');
+
+
+gameScreenSection.style.display = 'none'
+winGameSection.style.display = 'none'
+
+
+
+const btnStartGame = document.getElementById('btn-start-game');
+const btnEndGame = document.getElementById('btn-end-game');
+
+
+btnStartGame.addEventListener('click', function(){
+    gameScreenSection.style.display = 'block'
+    startGameSection.style.display = 'none'
+    winGameSection.style.display = 'none'
+})
+
+
+btnEndGame.addEventListener('click', function(){
+    gameScreenSection.style.display = 'none'
+    startGameSection.style.display = 'block'
+    winGameSection.style.display = 'none'
+})
+
+
+
+
 // Array of all dog image filenames
 const allDogs = [
     'dog1_AdobeStock_99884104.jpg',
