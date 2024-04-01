@@ -211,7 +211,7 @@ section p {
 .container {
 	display: flex;
 	justify-content: center;
-	margin-top: 5rem;
+	margin-top: 1rem;
 }
 
 #cards-container {
@@ -243,6 +243,18 @@ section p {
 .game-screen-opacity {
     opacity: 0.5; 
     pointer-events: none; 
+}
+
+
+.count {
+	padding-left: 1300px;
+	margin: 0;
+
+	
+}
+
+span {
+	padding-right: 70px;
 }
 
 
