@@ -82,6 +82,15 @@ function updateMatchCount() {
     matchCountElement.textContent = `Matches: ${matchedImages.length}`;
 }
 
+// Get reference to the moves count element
+const movesCountElement = document.getElementById('moves-count');
+let movesCount = 0; // Initialize moves count
+
+// Function to update and display the moves count
+function updateMovesCount() {
+    movesCountElement.textContent = `Moves: ${movesCount}`;
+}
+
 
 // Function to handle click event on image cards
 function handleClick(imageCard) {
@@ -94,6 +103,9 @@ function handleClick(imageCard) {
         firstImageName = imageName;
         firstImageIndex = index;
     } else {
+            // Increment moves count
+            movesCount++;
+            updateMovesCount(); // Update moves count display
     // Check if the second clicked image matches the first one
         if (firstImageName === imageName &&
             firstImageIndex !== index &&
