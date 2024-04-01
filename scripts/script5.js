@@ -92,25 +92,8 @@ function updateMovesCount() {
     movesCountElement.textContent = `Moves: ${movesCount}`;
 }
 
-
-// // Get reference to the audio element
-// const cardAudio = document.getElementById('card-audio');
-
-// // Function to play the card click sound
-// function playCardSound() {
-//     // Check if the audio is already playing, if so, rewind it to the start
-//     if (!cardAudio.paused) {
-//         cardAudio.currentTime = 0;
-//     }
-//     cardAudio.play(); // Play the audio
-// }
-
-
 // Function to handle click event on image cards
 function handleClick(imageCard) {
-//    // Play the card click sound
-//    playCardSound();
-
     const index = imageCard.dataset.index;
     const imageName = shuffleAllDogs[index];
     imageCard.src = `images/${imageName}`;
@@ -156,8 +139,9 @@ function clearImages() {
 // Function to check if all images are matched
 function checkWinCondition() {
     if (matchedImages.length === allDogs.length) {
-        // All images are matched, display the win-game section
-        winGamePopUp.style.display = 'block'; 
+        // All images are matched, display the win-game pop-up
+        winGamePopUp.style.display = 'block';
+        btnEndGame.style.display = 'none';
     }
 }
 
