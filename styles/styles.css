@@ -42,7 +42,7 @@ h6 {
 
 h2	{
 	font-size: 2rem;
-	padding: 2rem 0  0; 
+	margin-left: 10rem;
 }
 
 
@@ -107,6 +107,7 @@ a:active {
 	margin: 0 auto;
 }
 
+
  
 
 
@@ -115,9 +116,13 @@ a:active {
 --------------------------------------------------------------*/
 
 section {
-	margin: 1rem 10rem;
+	margin: 4rem auto;
+	height: 100%;
 }
 
+section p {
+	margin-left: 10rem;
+}
 
 /* Header
 --------------------------------------------- */
@@ -127,12 +132,62 @@ section {
 --------------------------------------------- */
 
 
+
 .outline-dog,
 .icon-sound {
     width: 50px;
+}
+
+.outline-dog {
 	display: inline-block;
 	position: relative;
 	vertical-align: bottom;
+}
+
+.icon-sound {
+	position:absolute;
+	top: 0;
+	right: 280px;
+	padding-top: 3.125rem;
+}
+
+.container_img_start-game_button {
+	position: relative;
+}
+
+.btn-start-game {
+	position: absolute;
+	top: 80%;
+	left: 50%; 
+}
+
+.btn-end-game {
+	position: absolute;
+	top: 800px;
+	left: 1460px;
+
+}
+
+.btn-start-game ,
+.btn-end-game {
+	padding: 15px 35px;
+	border-radius: 10px;
+	cursor: pointer;
+	color: #707070;
+	border: 1px solid #707070;
+	background-color: #FFFFFF;
+	/* width: 179px;
+	height: 59px; */
+	font-size: 1.375rem;
+}
+
+
+.paws-trail {
+	/* position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 5000; */
+
 }
 
 
@@ -148,12 +203,15 @@ section {
 	border: #707070 solid 1px;
 	border-radius: 10px;
 	box-shadow: 4px 8px 4px;
+	margin-top: 5rem;
+	margin-bottom: 12rem;
 }
 
 
 .container {
 	display: flex;
 	justify-content: center;
+	margin-top: 5rem;
 }
 
 #cards-container {
@@ -161,8 +219,6 @@ section {
 	grid-template-columns: repeat(6,180px);
 	grid-template-rows: repeat(2,180px);
 	gap: 2rem;
-	/* justify-content: center; */
-	/* align-items: self-start; */
 	border: #707070 solid 1px;
 	border-radius: 10px;
 	padding: 3rem;
@@ -184,11 +240,14 @@ section {
 }
 
 
+
+
+
 /* Footer
 --------------------------------------------- */
 
 footer {
 	font-size: small;
-	margin: 1.5rem auto;
+	margin: 8rem auto 1rem;
 	text-align: center;
 }
