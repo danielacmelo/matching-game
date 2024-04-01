@@ -92,8 +92,24 @@ function updateMovesCount() {
 }
 
 
+// // Get reference to the audio element
+// const cardAudio = document.getElementById('card-audio');
+
+// // Function to play the card click sound
+// function playCardSound() {
+//     // Check if the audio is already playing, if so, rewind it to the start
+//     if (!cardAudio.paused) {
+//         cardAudio.currentTime = 0;
+//     }
+//     cardAudio.play(); // Play the audio
+// }
+
+
 // Function to handle click event on image cards
 function handleClick(imageCard) {
+//    // Play the card click sound
+//    playCardSound();
+
     const index = imageCard.dataset.index;
     const imageName = shuffleAllDogs[index];
     imageCard.src = `images/${imageName}`;
