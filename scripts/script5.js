@@ -1,10 +1,10 @@
 // Get references to the sections in the HTML document
 const startGameSection = document.getElementById('start-game');
 const gameScreenSection = document.getElementById('game-screen');
-const winGameSection = document.getElementById('win-game');
+const winGamePopUp = document.getElementById('win-game');
 
 // Store the sections in an array for easy iteration
-const gameElements = [gameScreenSection, startGameSection, winGameSection];
+const gameElements = [gameScreenSection, startGameSection, winGamePopUp];
 
 // Function to toggle the display of sections based on the active section
 function toggleSectionDisplay(activeSection) {
@@ -12,6 +12,7 @@ function toggleSectionDisplay(activeSection) {
     gameElements.forEach(section => {
         // If the section matches the active section, display it; otherwise, hide it
         section.style.display = section === activeSection ? 'block' : 'none';
+        winGamePopUp.style.display = 'none'; 
     });
 }
 
@@ -119,9 +120,6 @@ function handleClick(imageCard) {
         firstImageName = imageName;
         firstImageIndex = index;
     } else {
-            // Increment moves count
-            movesCount++;
-            updateMovesCount(); // Update moves count display
     // Check if the second clicked image matches the first one
         if (firstImageName === imageName &&
             firstImageIndex !== index &&
@@ -130,6 +128,11 @@ function handleClick(imageCard) {
             updateMatchCount(); // Update match count after each match
             checkWinCondition(); // Check win condition after each match
         }
+
+    // Increment moves count after the second card is revealed
+    movesCount++;
+    updateMovesCount(); // Update moves count display
+
         firstImageName = ""; // Reset variables for the next pair
         firstImageIndex = "";
         clearImages(); // Clear images after a short delay
@@ -154,7 +157,7 @@ function clearImages() {
 function checkWinCondition() {
     if (matchedImages.length === allDogs.length) {
         // All images are matched, display the win-game section
-        toggleSectionDisplay(winGameSection);
+        winGamePopUp.style.display = 'block'; 
     }
 }
 

@@ -14,14 +14,14 @@ const btnEndGame = document.getElementById('btn-end-game');
 btnStartGame.addEventListener('click', function(){
     gameScreenSection.style.display = 'block'
     startGameSection.style.display = 'none'
-    winGameSection.style.display = 'none'
+    winGamePopUp.style.display = 'none'
 })
 
 
 btnEndGame.addEventListener('click', function(){
     gameScreenSection.style.display = 'none'
     startGameSection.style.display = 'block'
-    winGameSection.style.display = 'none'
+    winGamePopUp.style.display = 'none'
 })
 
 
