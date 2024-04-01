@@ -130,6 +130,9 @@ section {
 .outline-dog,
 .icon-sound {
     width: 50px;
+	display: inline-block;
+	position: relative;
+	vertical-align: bottom;
 }
 
 

@@ -109,6 +109,17 @@ function clearImages() {
     }, 500);
 }
 
+
+// Function to check if all images are matched
+function checkWinCondition() {
+    if (matchedImages.length === allDogs.length) {
+        // All images are matched, display the win-game section
+        toggleSectionDisplay(winGameSection);
+    }
+}
+
+
+
 // Shuffle the array of dog images
 const shuffleAllDogs = shuffleArray(allDogs);
 
@@ -122,3 +133,5 @@ for (let i = 0; i < shuffleAllDogs.length; i++) {
 
 // Select all image cards
 const imageCards = document.querySelectorAll('.image-card');
+
+

@@ -7,7 +7,6 @@ gameScreenSection.style.display = 'none'
 winGameSection.style.display = 'none'
 
 
-
 const btnStartGame = document.getElementById('btn-start-game');
 const btnEndGame = document.getElementById('btn-end-game');
 
@@ -24,8 +23,6 @@ btnEndGame.addEventListener('click', function(){
     startGameSection.style.display = 'block'
     winGameSection.style.display = 'none'
 })
-
-
 
 
 // Array of all dog image filenames
