@@ -119,7 +119,6 @@ function checkWinCondition() {
 }
 
 
-
 // Shuffle the array of dog images
 const shuffleAllDogs = shuffleArray(allDogs);
 
