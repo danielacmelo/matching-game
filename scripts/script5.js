@@ -135,6 +135,8 @@ function clearImages() {
     }, 500);
 }
 
+const containerOpacity = document.getElementById('container-opacity');
+
 
 // Function to check if all images are matched
 function checkWinCondition() {
@@ -142,6 +144,8 @@ function checkWinCondition() {
         // All images are matched, display the win-game pop-up
         winGamePopUp.style.display = 'block';
         btnEndGame.style.display = 'none';
+        containerOpacity.style.opacity = '0.5';
+        
     }
 }
 
@@ -176,6 +180,5 @@ document.getElementById('btn-yes').addEventListener('click', () => {
 
 // Event listener for the "No" button in the win-game section
 document.getElementById('btn-no').addEventListener('click', () => {
-    // Hide the win-game section and stay on the same screen
-    toggleSectionDisplay(gameScreenSection);
+    return;
 });

@@ -33,8 +33,7 @@
         <img class="icon-sound" src="images/sound_icon_on_AdobeStock_304067869.svg" alt= "Sound icon">
 
         <p class="count"><span class="moves-count" id="moves-count">Moves: 0</span> <span class="match-count" id="match-count">Matches: 0</span></p>
-        <div class="container"> 
-            
+        <div class="container container-opacity" id="container-opacity">          
               
             <div class="cards-container" id="cards-container">
                 <audio id="card-audio">
@@ -62,13 +61,17 @@
             <button class="btn-end-game" id="btn-end-game">End game</button>     
       
         <div class="win-game" id="win-game">
-            <p>Congratulations!</p> 
-            <p>You deserve many dog licks!</p>
-            <img class="dog-win center" src="images/dog_end_AdobeStock_290971254.jpg" alt="A smiling dog in the middle of a field of daisies">
+            <div class="container-text-img-win" id="container-text-img-win">
+                <h3 class="tex-popup">Congratulations!</h3> 
+                <p class="tex-popup">You deserve many dog licks.</p>
+                <img class="dog-win center popup" id="popup" src="images/dog_end_AdobeStock_290971254.jpg" alt="A smiling dog in the middle of a field of daisies">
             <!-- <img src="images/dog_paws_trail.svg" alt= "Adorable paw prints left behind by a tiny dog"> -->
-            <p>Play again?</p>
-            <button class="btn-yes" id="btn-yes">Yes</button>
-            <button class="btn-no" id="btn-no">No</button>   
+            </div>
+            <div class="container-play-again">
+                <h4>Play again?</h4>
+                <button class="btn-yes" id="btn-yes">Yes</button>
+                <button class="btn-no" id="btn-no">No</button> 
+            </div> 
         </div>   
     </section>    
 
