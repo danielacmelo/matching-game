@@ -55,6 +55,8 @@ toggleSectionDisplay(startGameSection);
 btnStartGame.addEventListener('click', () => {
     // When the start game button is clicked, display the game screen section
     toggleSectionDisplay(gameScreenSection);
+    btnEndGame.style.display = 'block';
+    containerOpacity.style.opacity = '1';
 });
 
 // Event listener for the end game button
@@ -65,10 +67,12 @@ btnEndGame.addEventListener('click', () => {
 
 // Event listener for the "Yes" button in the win-game section
 document.getElementById('btn-yes').addEventListener('click', () => {
+
+    resetGameVars();
     // Reset the game (hide win-game section, reset matched images, shuffle cards)
     toggleSectionDisplay(startGameSection);
-    matchedImages.length = 0; // Clear the matched images array
     updateMatchCount(); // Update the match count display
+    updateMovesCount(); // Upate moves count display
     shuffleAllDogs = shuffleArray(allDogs); // Reshuffle the cards
     // Reset all card images to the paw image
     imageCards.forEach(card => {
@@ -85,7 +89,7 @@ document.getElementById('btn-no').addEventListener('click', () => {
 const gameScreen = document.querySelector("#cards-container");
 
 // Array to store matched images
-const matchedImages = [];
+let matchedImages = [];
 
 // Function to shuffle an array
 function shuffleArray(array) {
@@ -118,6 +122,17 @@ function updateMovesCount() {
 function handleClick(imageCard) {
     const index = imageCard.dataset.index;
     const imageName = shuffleAllDogs[index];
+
+    // Image previously matched
+    if(matchedImages.includes(imageName)) {
+        return;
+    }
+
+    // Image clicked twice
+    if(index === firstImageIndex) {
+        return;
+    }
+    
     imageCard.src = `images/${imageName}`;
 
     // Check if it's the first image clicked
@@ -134,9 +149,9 @@ function handleClick(imageCard) {
             checkWinCondition(); // Check win condition after each match
         }
 
-    // Increment moves count after the second card is revealed
-    movesCount++;
-    updateMovesCount(); // Update moves count display
+        // Increment moves count after the second card is revealed
+        movesCount++;
+        updateMovesCount(); // Update moves count display
 
         firstImageName = ""; // Reset variables for the next pair
         firstImageIndex = "";
@@ -157,6 +172,15 @@ function clearImages() {
     }, 500);
 }
 
+// Function to reset game variables
+function resetGameVars() {
+    shuffleAllDogs = [];
+    matchedImages = [];
+    movesCount = 0;
+    firstImageName = '';
+    firstImageIndex = '';
+}
+
 // Function to check if all images are matched
 function checkWinCondition() {
     if (matchedImages.length === allDogs.length) {
@@ -169,7 +193,7 @@ function checkWinCondition() {
 }
 
 // Shuffle the array of dog images
-const shuffleAllDogs = shuffleArray(allDogs);
+let shuffleAllDogs = shuffleArray(allDogs);
 
 // Create and append image elements to the game screen
 for (let i = 0; i < shuffleAllDogs.length; i++) {
