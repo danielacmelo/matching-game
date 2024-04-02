@@ -131,24 +131,11 @@ section p {
 /* Main
 --------------------------------------------- */
 
-
-
-.outline-dog,
-.icon-sound {
-    width: 50px;
-}
-
 .outline-dog {
 	display: inline-block;
 	position: relative;
 	vertical-align: bottom;
-}
-
-.icon-sound {
-	position:absolute;
-	top: 0;
-	right: 280px;
-	padding-top: 3.125rem;
+	width: 50px;
 }
 
 .container_img_start-game_button {
