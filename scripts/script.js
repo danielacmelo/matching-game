@@ -14,8 +14,10 @@ const matchCountElement = document.getElementById('match-count');
 const movesCountElement = document.getElementById('moves-count');
 let movesCount = 0; // Initialize moves count
 
-// Get reference to the update opacity
+// Get reference to the update opacity and image 
 const containerOpacity = document.getElementById('container-opacity');
+const pawsTrail = document.getElementById('paws-trail2');
+
 
 // Variables to track the first clicked image
 let firstImageName = '';
@@ -57,6 +59,7 @@ btnStartGame.addEventListener('click', () => {
     toggleSectionDisplay(gameScreenSection);
     btnEndGame.style.display = 'block';
     containerOpacity.style.opacity = '1';
+    pawsTrail.style.display = 'none';
 });
 
 // Event listener for the end game button
@@ -183,12 +186,16 @@ function resetGameVars() {
 
 // Function to check if all images are matched
 function checkWinCondition() {
+    winGamePopUp.style.display = 'block';
+    btnEndGame.style.display = 'none';
+    containerOpacity.style.opacity = '0.5';
+    pawsTrail.style.display = 'block'
     if (matchedImages.length === allDogs.length) {
         // All images are matched, display the win-game pop-up
         winGamePopUp.style.display = 'block';
         btnEndGame.style.display = 'none';
         containerOpacity.style.opacity = '0.5';
-        
+        pawsTrail.style.display = 'block'
     }
 }
 
