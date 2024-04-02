@@ -14,6 +14,7 @@ const matchCountElement = document.getElementById('match-count');
 const movesCountElement = document.getElementById('moves-count');
 let movesCount = 0; // Initialize moves count
 
+// Get reference to the update opacity
 const containerOpacity = document.getElementById('container-opacity');
 
 // Variables to track the first clicked image
@@ -34,7 +35,6 @@ const allDogs = [
 // Filename for the paw image
 const paw = "dogs_paws_AdobeStock_252849218.jpg";
 
-
 // Store the sections in an array for easy iteration
 const gameElements = [gameScreenSection, startGameSection, winGamePopUp];
 
@@ -50,7 +50,6 @@ function toggleSectionDisplay(activeSection) {
 
 // By default, display the start game section
 toggleSectionDisplay(startGameSection);
-
 
 // Event listener for the start game button
 btnStartGame.addEventListener('click', () => {
@@ -82,13 +81,11 @@ document.getElementById('btn-no').addEventListener('click', () => {
     return;
 });
 
-
 // Container element where the game cards will be displayed
 const gameScreen = document.querySelector("#cards-container");
 
 // Array to store matched images
 const matchedImages = [];
-
 
 // Function to shuffle an array
 function shuffleArray(array) {
