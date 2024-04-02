@@ -26,12 +26,12 @@ let firstImageIndex = '';
 
 // Array of all dog image filenames
 const allDogs = [
-    'dog1_AdobeStock_99884104.jpg',
-    'dog2_AdobeStock_167618810.jpg',
-    'dog3_AdobeStock_202747104.jpg',
-    'dog4_AdobeStock_273162497.jpg',
-    'dog5_AdobeStock_439003091.jpg',
-    'dog6_AdobeStock_322612102.jpg'
+    'dachshund.jpg',
+    'heartshapedmark.jpg',
+    'corgi.jpg',
+    'cockerspaniel.jpg',
+    'cardiganwelshcorgi.jpg',
+    'jackrussell.jpg'
 ];
 
 // Filename for the paw image
@@ -186,10 +186,6 @@ function resetGameVars() {
 
 // Function to check if all images are matched
 function checkWinCondition() {
-    winGamePopUp.style.display = 'block';
-    btnEndGame.style.display = 'none';
-    containerOpacity.style.opacity = '0.5';
-    pawsTrail.style.display = 'block'
     if (matchedImages.length === allDogs.length) {
         // All images are matched, display the win-game pop-up
         winGamePopUp.style.display = 'block';
